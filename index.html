@@ -1,75 +1,2115 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DA Moments</title>
+    <meta charset="UTF-8">
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #111;
-    color: white;
-    text-align: center;
-}
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-header {
-    background: #000;
-    padding: 80px 20px;
-}
+    <meta name="description"
+          content="DA Moments vermietet hochwertige Fotoboxen für Hochzeiten, Geburtstage, Firmenfeiern und Events in Hamburg und Umgebung.">
 
-h1 {
-    color: gold;
-    font-size: 4rem;
-}
+    <meta name="keywords"
+          content="Fotobox Hamburg, Fotobox mieten, Hochzeit Fotobox, Eventservice Hamburg, DA Moments">
 
-section {
-    padding: 40px 20px;
-}
+    <meta name="author" content="DA Moments">
 
-.button {
-    display: inline-block;
-    background: gold;
-    color: black;
-    padding: 15px 25px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-}
-</style>
+    <meta name="robots" content="index, follow">
 
+    <meta name="theme-color" content="#090909">
+
+    <meta property="og:title"
+          content="DA Moments | Fotoboxen für besondere Momente">
+
+    <meta property="og:description"
+          content="Fotoboxen, Sofortdrucke und individuelle Designs für Hochzeiten, Geburtstage und Firmenfeiern in Hamburg und Umgebung.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:url"
+          content="https://da-moments.de/">
+
+    <link rel="canonical"
+          href="https://da-moments.de/">
+
+    <title>DA Moments | Fotoboxen in Hamburg</title>
+
+    <style>
+        :root {
+            --black: #090909;
+            --black-light: #121212;
+            --black-card: #181818;
+            --gold: #d4af37;
+            --gold-light: #f1d77a;
+            --white: #ffffff;
+            --text: #eeeeee;
+            --text-muted: #b8b8b8;
+            --border: rgba(212, 175, 55, 0.28);
+            --shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+            --radius: 18px;
+            --max-width: 1180px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--black);
+            color: var(--text);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+        .container {
+            width: min(100% - 40px, var(--max-width));
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-dark {
+            background: var(--black-light);
+        }
+
+        .section-heading {
+            max-width: 760px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 12px;
+            color: var(--gold-light);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        h1,
+        h2,
+        h3 {
+            line-height: 1.15;
+        }
+
+        h2 {
+            margin-bottom: 18px;
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--white);
+        }
+
+        h3 {
+            margin-bottom: 12px;
+            color: var(--gold-light);
+        }
+
+        .lead {
+            color: var(--text-muted);
+            font-size: 1.08rem;
+        }
+
+        .gold-text {
+            color: var(--gold);
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-height: 50px;
+            padding: 13px 24px;
+            border: 1px solid var(--gold);
+            border-radius: 999px;
+            background: var(--gold);
+            color: #080808;
+            text-decoration: none;
+            font-weight: 800;
+            cursor: pointer;
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease,
+                color 0.2s ease;
+        }
+
+        .button:hover,
+        .button:focus-visible {
+            transform: translateY(-2px);
+            background: var(--gold-light);
+        }
+
+        .button-secondary {
+            background: transparent;
+            color: var(--gold-light);
+        }
+
+        .button-secondary:hover,
+        .button-secondary:focus-visible {
+            background: var(--gold);
+            color: #080808;
+        }
+
+        .button-full {
+            width: 100%;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 20px;
+            z-index: 9999;
+            padding: 12px 18px;
+            border-radius: 8px;
+            background: var(--gold);
+            color: #000;
+            font-weight: 700;
+        }
+
+        .skip-link:focus {
+            top: 20px;
+        }
+
+        /* Navigation */
+
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            width: 100%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            background: rgba(9, 9, 9, 0.92);
+            backdrop-filter: blur(12px);
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 76px;
+        }
+
+        .logo {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.45rem;
+            font-weight: 900;
+            letter-spacing: 0.05em;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 700;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            color: var(--gold-light);
+        }
+
+        .menu-button {
+            display: none;
+            width: 46px;
+            height: 46px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: transparent;
+            color: var(--white);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* Hero */
+
+        .hero {
+            position: relative;
+            display: grid;
+            min-height: 100vh;
+            align-items: center;
+            padding: 140px 0 80px;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 78% 32%,
+                    rgba(212, 175, 55, 0.19),
+                    transparent 31%),
+                radial-gradient(circle at 18% 75%,
+                    rgba(212, 175, 55, 0.08),
+                    transparent 27%),
+                linear-gradient(135deg, #050505, #111111 55%, #080808);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: 0.22;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.035) 1px,
+                    transparent 1px),
+                linear-gradient(90deg,
+                    rgba(255, 255, 255, 0.035) 1px,
+                    transparent 1px);
+            background-size: 42px 42px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-copy {
+            max-width: 720px;
+        }
+
+        .hero h1 {
+            max-width: 850px;
+            margin-bottom: 24px;
+            color: var(--white);
+            font-size: clamp(3rem, 7vw, 6.2rem);
+            letter-spacing: -0.045em;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            margin-bottom: 32px;
+            color: var(--text-muted);
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 38px;
+        }
+
+        .hero-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .hero-features span::before {
+            content: "✓";
+            margin-right: 7px;
+            color: var(--gold);
+            font-weight: 900;
+        }
+
+        .hero-card {
+            position: relative;
+            min-height: 470px;
+            padding: 34px;
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            background:
+                linear-gradient(145deg,
+                    rgba(255, 255, 255, 0.08),
+                    rgba(255, 255, 255, 0.015));
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .hero-card::before {
+            content: "";
+            position: absolute;
+            top: -90px;
+            right: -90px;
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.2);
+            filter: blur(8px);
+        }
+
+        .photo-placeholder {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            height: 100%;
+            min-height: 400px;
+            place-items: center;
+            padding: 30px;
+            border: 1px dashed rgba(212, 175, 55, 0.6);
+            border-radius: 22px;
+            background:
+                linear-gradient(135deg,
+                    rgba(212, 175, 55, 0.08),
+                    rgba(0, 0, 0, 0.3));
+            text-align: center;
+        }
+
+        .photo-placeholder strong {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--gold-light);
+            font-size: 1.35rem;
+        }
+
+        .photo-placeholder p {
+            color: var(--text-muted);
+        }
+
+        /* Benefits */
+
+        .benefit-bar {
+            position: relative;
+            z-index: 2;
+            margin-top: -35px;
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--black-card);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .benefit {
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        .benefit + .benefit {
+            border-left: 1px solid var(--border);
+        }
+
+        .benefit strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--gold-light);
+        }
+
+        .benefit span {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Cards */
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .card {
+            padding: 32px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--black-card);
+            box-shadow: var(--shadow);
+            transition:
+                transform 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(212, 175, 55, 0.65);
+        }
+
+        .card-icon {
+            display: grid;
+            width: 54px;
+            height: 54px;
+            margin-bottom: 22px;
+            place-items: center;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: rgba(212, 175, 55, 0.08);
+            color: var(--gold-light);
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+        }
+
+        /* Packages */
+
+        .packages {
+            align-items: stretch;
+        }
+
+        .package-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .package-card.featured {
+            border-color: var(--gold);
+            transform: scale(1.025);
+        }
+
+        .package-card.featured:hover {
+            transform: scale(1.025) translateY(-6px);
+        }
+
+        .popular-label {
+            position: absolute;
+            top: 17px;
+            right: 17px;
+            padding: 6px 11px;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #080808;
+            font-size: 0.72rem;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .package-name {
+            margin-bottom: 8px;
+            color: var(--white);
+            font-size: 1.45rem;
+        }
+
+        .price {
+            margin: 12px 0 22px;
+            color: var(--gold-light);
+            font-size: 2.35rem;
+            font-weight: 900;
+        }
+
+        .price small {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+
+        .feature-list {
+            flex: 1;
+            margin: 0 0 28px;
+            list-style: none;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding: 10px 0 10px 27px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+            color: var(--text-muted);
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 900;
+        }
+
+        /* Process */
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .process-step {
+            position: relative;
+            padding: 28px;
+            border-top: 2px solid var(--gold);
+            border-radius: 0 0 var(--radius) var(--radius);
+            background: var(--black-card);
+        }
+
+        .step-number {
+            display: block;
+            margin-bottom: 15px;
+            color: var(--gold);
+            font-size: 2rem;
+            font-weight: 900;
+        }
+
+        .process-step p {
+            color: var(--text-muted);
+        }
+
+        /* Occasion section */
+
+        .occasion-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .occasion {
+            min-height: 190px;
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background:
+                linear-gradient(145deg,
+                    rgba(212, 175, 55, 0.11),
+                    rgba(255, 255, 255, 0.025));
+        }
+
+        .occasion h3 {
+            margin-top: 70px;
+        }
+
+        /* Gallery */
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .gallery-item {
+            display: grid;
+            min-height: 280px;
+            place-items: center;
+            padding: 25px;
+            border: 1px dashed rgba(212, 175, 55, 0.55);
+            border-radius: var(--radius);
+            background: var(--black-card);
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        .gallery-item:first-child {
+            grid-column: span 2;
+        }
+
+        /* About */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .about-visual {
+            display: grid;
+            min-height: 450px;
+            place-items: center;
+            padding: 35px;
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            background:
+                radial-gradient(circle at center,
+                    rgba(212, 175, 55, 0.18),
+                    transparent 45%),
+                var(--black-card);
+            text-align: center;
+        }
+
+        .about-visual strong {
+            color: var(--gold-light);
+            font-size: 2.4rem;
+        }
+
+        .about-copy p {
+            margin-bottom: 18px;
+            color: var(--text-muted);
+        }
+
+        /* FAQ */
+
+        .faq-list {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        details {
+            margin-bottom: 13px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: var(--black-card);
+        }
+
+        summary {
+            position: relative;
+            padding: 21px 55px 21px 22px;
+            color: var(--white);
+            font-weight: 800;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            position: absolute;
+            top: 50%;
+            right: 22px;
+            color: var(--gold);
+            font-size: 1.5rem;
+            transform: translateY(-50%);
+        }
+
+        details[open] summary::after {
+            content: "−";
+        }
+
+        details p {
+            padding: 0 22px 22px;
+            color: var(--text-muted);
+        }
+
+        /* Contact */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 35px;
+        }
+
+        .contact-info,
+        .contact-form {
+            padding: 34px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--black-card);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-info p {
+            margin-bottom: 22px;
+            color: var(--text-muted);
+        }
+
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-list li {
+            padding: 13px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .contact-list a {
+            color: var(--gold-light);
+            text-decoration: none;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            outline: none;
+            background: #101010;
+            color: var(--white);
+        }
+
+        input,
+        select {
+            height: 50px;
+            padding: 0 14px;
+        }
+
+        textarea {
+            min-height: 150px;
+            padding: 14px;
+            resize: vertical;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12);
+        }
+
+        .form-note {
+            margin-top: 13px;
+            color: var(--text-muted);
+            font-size: 0.83rem;
+        }
+
+        /* Legal */
+
+        .legal-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .legal-box {
+            margin-bottom: 24px;
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--black-card);
+        }
+
+        .legal-box h3 {
+            margin-top: 22px;
+        }
+
+        .legal-box h3:first-child {
+            margin-top: 0;
+        }
+
+        .legal-box p,
+        .legal-box li {
+            color: var(--text-muted);
+        }
+
+        .legal-box ul {
+            padding-left: 19px;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 55px 0 28px;
+            border-top: 1px solid var(--border);
+            background: #050505;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr 0.8fr;
+            gap: 40px;
+            margin-bottom: 35px;
+        }
+
+        .footer-grid p,
+        .footer-grid li {
+            color: var(--text-muted);
+        }
+
+        .footer-grid ul {
+            list-style: none;
+        }
+
+        .footer-grid a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .footer-grid a:hover {
+            color: var(--gold-light);
+        }
+
+        .footer-title {
+            margin-bottom: 15px;
+            color: var(--white);
+            font-weight: 900;
+        }
+
+        .footer-bottom {
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-muted);
+            text-align: center;
+            font-size: 0.88rem;
+        }
+
+        /* Floating WhatsApp */
+
+        .whatsapp-floating {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 900;
+            display: grid;
+            width: 60px;
+            height: 60px;
+            place-items: center;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            background: #25d366;
+            color: #07170c;
+            text-decoration: none;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+            font-size: 1.55rem;
+            font-weight: 900;
+            transition: transform 0.2s ease;
+        }
+
+        .whatsapp-floating:hover {
+            transform: scale(1.08);
+        }
+
+        /* Responsive */
+
+        @media (max-width: 980px) {
+            .hero-content,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-copy {
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            .hero-actions,
+            .hero-features {
+                justify-content: center;
+            }
+
+            .hero-card {
+                max-width: 680px;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .process-grid,
+            .occasion-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .benefit-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .benefit:nth-child(3) {
+                border-left: 0;
+                border-top: 1px solid var(--border);
+            }
+
+            .benefit:nth-child(4) {
+                border-top: 1px solid var(--border);
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .container {
+                width: min(100% - 28px, var(--max-width));
+            }
+
+            .section {
+                padding: 70px 0;
+            }
+
+            .menu-button {
+                display: grid;
+                place-items: center;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 76px;
+                right: -100%;
+                display: flex;
+                width: min(86%, 360px);
+                height: calc(100vh - 76px);
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+                padding: 25px;
+                border-left: 1px solid var(--border);
+                background: #0c0c0c;
+                transition: right 0.25s ease;
+            }
+
+            .nav-links.open {
+                right: 0;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                width: 100%;
+                padding: 16px 4px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .hero {
+                min-height: auto;
+                padding-top: 125px;
+            }
+
+            .hero h1 {
+                font-size: clamp(2.8rem, 15vw, 4.6rem);
+            }
+
+            .hero-card {
+                min-height: 380px;
+                padding: 18px;
+            }
+
+            .photo-placeholder {
+                min-height: 340px;
+            }
+
+            .card-grid,
+            .gallery-grid,
+            .process-grid,
+            .occasion-grid,
+            .footer-grid,
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item:first-child {
+                grid-column: auto;
+            }
+
+            .package-card.featured,
+            .package-card.featured:hover {
+                transform: none;
+            }
+
+            .benefit-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefit + .benefit,
+            .benefit:nth-child(3),
+            .benefit:nth-child(4) {
+                border-top: 1px solid var(--border);
+                border-left: 0;
+            }
+
+            .hero-actions .button {
+                width: 100%;
+            }
+
+            .contact-info,
+            .contact-form,
+            .card {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<header>
-    <h1>DA Moments</h1>
-    <p>Fotoboxen • Events • Hochzeiten • Geburtstage</p>
+#main-content
+    Zum Inhalt springen
+</a>
 
-    <a class="button" href="mailto:info@damoments.de">
-        Jetzt anfragen
-    </a>
+<header class="site-header">
+    <div class="container navbar">
+
+        #start
+            DA <span>Moments</span>
+        </a>
+
+        <button class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Menü öffnen"
+                aria-expanded="false"
+                aria-controls="navigation">
+            ☰
+        </button>
+
+        <nav aria-label="Hauptnavigation">
+            <ul class="nav-links" id="navigation">
+                <li>#leistungenLeistungen</a></li>
+                <li>#paketePakete</a></li>
+                <li>#ablaufAblauf</a></li>
+                <li>#galerieGalerie</a></li>
+                <li>#faqFAQ</a></li>
+                <li>#kontaktKontakt</a></li>
+            </ul>
+        </nav>
+
+    </div>
 </header>
 
-<section>
-    <h2>Unsere Leistungen</h2>
+<main id="main-content">
 
-    <p>📸 Premium Fotoboxen</p>
-    <p>🖨️ Sofortdrucke</p>
-    <p>🎉 Requisiten</p>
-    <p>💍 Hochzeiten</p>
-    <p>🎂 Geburtstage</p>
-    <p>🏢 Firmenveranstaltungen</p>
-</section>
+    <!-- STARTBEREICH -->
 
-<section>
-    <h2>Über DA Moments</h2>
+    <section class="hero" id="start">
+        <div class="container hero-content">
 
-    <p>
-        Wir schaffen unvergessliche Momente mit modernen Fotoboxen
-        und Eventlösungen in Hamburg und Umgebung.
-    </p>
-</section>
+            <div class="hero-copy">
+
+                <span class="eyebrow">
+                    Fotoboxen und Eventmomente aus Hamburg
+                </span>
+
+                <h1>
+                    Erinnerungen,
+                    die <span class="gold-text">bleiben.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Moderne Fotoboxen, hochwertige Sofortdrucke und
+                    individuelle Fotolayouts für Hochzeiten,
+                    Geburtstage, Firmenfeiern und besondere Events
+                    in Hamburg und Umgebung.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button"
+                       href="mailto:info@da-moments.de?subject=Unverbindliche Anfrage an DA Moments">
+                        Unverbindlich anfragen
+                    </a>
+
+                    #pakete
+                        Pakete ansehen
+                    </a>
+                </div>
+
+                <div class="hero-features">
+                    <span>Persönlicher Service</span>
+                    <span>Individuelle Layouts</span>
+                    <span>Hamburg und Umgebung</span>
+                </div>
+
+            </div>
+
+            <div class="hero-card">
+                <div class="photo-placeholder">
+                    <div>
+                        <strong>Hier kommt euer bestes Fotobox-Bild hin</strong>
+                        <p>
+                            Sobald das Bild bei GitHub hochgeladen ist,
+                            wird dieser Bereich durch das Foto ersetzt.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- VORTEILSLEISTE -->
+
+    <div class="benefit-bar">
+        <div class="container benefit-grid">
+
+            <div class="benefit">
+                <strong>Professionelle Technik</strong>
+                <span>Für hochwertige Erinnerungsfotos</span>
+            </div>
+
+            <div class="benefit">
+                <strong>Sofortdruck</strong>
+                <span>Die Erinnerung direkt in der Hand</span>
+            </div>
+
+            <div class="benefit">
+                <strong>Individuelles Design</strong>
+                <span>Passend zu eurem Event</span>
+            </div>
+
+            <div class="benefit">
+                <strong>Persönliche Betreuung</strong>
+                <span>Direkter Kontakt statt Callcenter</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- LEISTUNGEN -->
+
+    <section class="section" id="leistungen">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">Unsere Leistungen</span>
+
+                <h2>
+                    Alles für euren besonderen Moment
+                </h2>
+
+                <p class="lead">
+                    Unsere Fotobox verbindet Spaß, hochwertige Bilder
+                    und bleibende Erinnerungen auf einer Veranstaltung.
+                </p>
+            </div>
+
+            <div class="card-grid">
+
+                <article class="card">
+                    <div class="card-icon">📸</div>
+
+                    <h3>Moderne Fotobox</h3>
+
+                    <p>
+                        Eine benutzerfreundliche Fotobox für spontane,
+                        lustige und besondere Aufnahmen während eures
+                        gesamten Events.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">🖨</div>
+
+                    <h3>Sofortdrucke</h3>
+
+                    <p>
+                        Die Gäste erhalten ihre Lieblingsbilder direkt
+                        vor Ort als persönliche Erinnerung zum Mitnehmen.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">✦</div>
+
+                    <h3>Individuelle Fotolayouts</h3>
+
+                    <p>
+                        Das Druckdesign kann passend zu Hochzeit,
+                        Geburtstag, Firmenlogo oder Veranstaltungsmotto
+                        gestaltet werden.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">🎉</div>
+
+                    <h3>Requisiten</h3>
+
+                    <p>
+                        Eine Auswahl passender Accessoires sorgt für
+                        kreative Motive und Unterhaltung vor der Kamera.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">☁</div>
+
+                    <h3>Digitale Erinnerungen</h3>
+
+                    <p>
+                        Die entstandenen Aufnahmen können zusätzlich
+                        digital für das Brautpaar oder den Veranstalter
+                        bereitgestellt werden.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">♥</div>
+
+                    <h3>Persönlicher Service</h3>
+
+                    <p>
+                        Von der ersten Anfrage bis zum Event habt ihr bei
+                        DA Moments direkte und persönliche Ansprechpartner.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PAKETE -->
+
+    <section class="section section-dark" id="pakete">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">Unsere Pakete</span>
+
+                <h2>
+                    Das passende Paket für euer Event
+                </h2>
+
+                <p class="lead">
+                    Die folgenden Preise sind Platzhalter. Tragt hier
+                    später eure tatsächlichen Pakete und Preise ein.
+                </p>
+            </div>
+
+            <div class="card-grid packages">
+
+                <article class="card package-card">
+
+                    <h3 class="package-name">Digital</h3>
+
+                    <p>
+                        Für kleinere Feiern und digitale Erinnerungen.
+                    </p>
+
+                    <div class="price">
+                        Preis auf Anfrage
+                    </div>
+
+                    <ul class="feature-list">
+                        <li>Fotobox für den vereinbarten Zeitraum</li>
+                        <li>Digitale Aufnahmen</li>
+                        <li>Ausgewählte Requisiten</li>
+                        <li>Individuelles Bildschirmdesign</li>
+                        <li>Bereitstellung der Bilder</li>
+                    </ul>
+
+                    <a class="button button-secondary button-full"
+                       href="mailto:info@da-moments.de?subject=Anfrage Paket Digital">
+                        Paket anfragen
+                    </a>
+                </article>
+
+                <article class="card package-card featured">
+
+                    <span class="popular-label">
+                        Beliebt
+                    </span>
+
+                    <h3 class="package-name">Print</h3>
+
+                    <p>
+                        Fotobox und Sofortdruck für bleibende Erinnerungen.
+                    </p>
+
+                    <div class="price">
+                        Preis auf Anfrage
+                    </div>
+
+                    <ul class="feature-list">
+                        <li>Fotobox für den vereinbarten Zeitraum</li>
+                        <li>Professioneller Sofortdruck</li>
+                        <li>Individuelles Drucklayout</li>
+                        <li>Digitale Aufnahmen</li>
+                        <li>Requisiten inklusive</li>
+                    </ul>
+
+                    <a class="button button-full"
+                       href="mailto:info@da-moments.de?subject=Anfrage Paket Print">
+                        Paket anfragen
+                    </a>
+                </article>
+
+                <article class="card package-card">
+
+                    <h3 class="package-name">Signature</h3>
+
+                    <p>
+                        Die umfangreiche Lösung für besondere Events.
+                    </p>
+
+                    <div class="price">
+                        Individuelles Angebot
+                    </div>
+
+                    <ul class="feature-list">
+                        <li>Fotobox mit Sofortdruck</li>
+                        <li>Individuelle Abstimmung</li>
+                        <li>Personalisierte Druckvorlage</li>
+                        <li>Digitale Bildbereitstellung</li>
+                        <li>Optionale Zusatzleistungen</li>
+                    </ul>
+
+                    <a class="button button-secondary button-full"
+                       href="mailto:info@da-moments.de?subject=Anfrage Paket Signature">
+                        Angebot anfordern
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABLAUF -->
+
+    <section class="section" id="ablauf">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">So funktioniert es</span>
+
+                <h2>
+                    In vier Schritten zur Fotobox
+                </h2>
+
+                <p class="lead">
+                    Einfach anfragen, Eventdaten abstimmen und gemeinsam
+                    die passende Lösung auswählen.
+                </p>
+            </div>
+
+            <div class="process-grid">
+
+                <article class="process-step">
+                    <span class="step-number">01</span>
+
+                    <h3>Anfrage senden</h3>
+
+                    <p>
+                        Schickt uns Datum, Veranstaltungsort und Art
+                        des Events per E-Mail oder WhatsApp.
+                    </p>
+                </article>
+
+                <article class="process-step">
+                    <span class="step-number">02</span>
+
+                    <h3>Paket abstimmen</h3>
+
+                    <p>
+                        Gemeinsam wählen wir Ausstattung, Laufzeit
+                        und gewünschte Zusatzleistungen aus.
+                    </p>
+                </article>
+
+                <article class="process-step">
+                    <span class="step-number">03</span>
+
+                    <h3>Design vorbereiten</h3>
+
+                    <p>
+                        Das Fotolayout wird passend zu eurem Anlass
+                        und euren Designwünschen vorbereitet.
+                    </p>
+                </article>
+
+                <article class="process-step">
+                    <span class="step-number">04</span>
+
+                    <h3>Momente festhalten</h3>
+
+                    <p>
+                        Auf dem Event entstehen besondere Bilder und
+                        Erinnerungen für euch und eure Gäste.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ANLÄSSE -->
+
+    <section class="section section-dark">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">Für jeden Anlass</span>
+
+                <h2>
+                    Wo DA Moments zum Einsatz kommt
+                </h2>
+            </div>
+
+            <div class="occasion-grid">
+
+                <article class="occasion">
+                    <h3>Hochzeiten</h3>
+                    <p>Persönliche Erinnerungen für das Brautpaar und alle Gäste.</p>
+                </article>
+
+                <article class="occasion">
+                    <h3>Geburtstage</h3>
+                    <p>Unterhaltung und kreative Bilder für jede Geburtstagsfeier.</p>
+                </article>
+
+                <article class="occasion">
+                    <h3>Firmenfeiern</h3>
+                    <p>Fotomomente mit einem Layout passend zum Unternehmen.</p>
+                </article>
+
+                <article class="occasion">
+                    <h3>Private Events</h3>
+                    <p>Fotobox-Erlebnisse für besondere Feiern und Veranstaltungen.</p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIE -->
+
+    <section class="section" id="galerie">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">Galerie</span>
+
+                <h2>
+                    Einblicke in DA Moments
+                </h2>
+
+                <p class="lead">
+                    Diese Platzhalter könnt ihr später durch Fotos der
+                    Fotobox, Beispielausdrucke und Eventaufbauten ersetzen.
+                </p>
+            </div>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item">
+                    Großes Bild der aufgebauten Fotobox
+                </div>
+
+                <div class="gallery-item">
+                    Beispiel eines fertigen Ausdrucks
+                </div>
+
+                <div class="gallery-item">
+                    Detailaufnahme der Fotobox
+                </div>
+
+                <div class="gallery-item">
+                    Requisiten und Zubehör
+                </div>
+
+                <div class="gallery-item">
+                    Fotobox auf einer Veranstaltung
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ÜBER UNS -->
+
+    <section class="section section-dark" id="ueber-uns">
+        <div class="container about-grid">
+
+            <div class="about-visual">
+                <div>
+                    <strong>DA Moments</strong>
+                    <p>Persönlich. Kreativ. Unvergesslich.</p>
+                </div>
+            </div>
+
+            <div class="about-copy">
+
+                <span class="eyebrow">Über uns</span>
+
+                <h2>
+                    Besondere Momente verdienen besondere Erinnerungen
+                </h2>
+
+                <p>
+                    DA Moments ist ein familiengeführtes Unternehmen
+                    aus Hamburg mit dem Ziel, Feiern und Veranstaltungen
+                    durch besondere Fotoerlebnisse zu bereichern.
+                </p>
+
+                <p>
+                    Uns sind eine persönliche Betreuung, eine zuverlässige
+                    Organisation und ein professioneller Auftritt wichtig.
+                    Jede Veranstaltung ist individuell. Deshalb stimmen
+                    wir die Fotobox-Lösung passend zum Anlass ab.
+                </p>
+
+                #kontakt
+                    DA Moments anfragen
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+
+    <section class="section" id="faq">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">Häufige Fragen</span>
+
+                <h2>
+                    Fragen zur Fotobox
+                </h2>
+            </div>
+
+            <div class="faq-list">
+
+                <details>
+                    <summary>
+                        Für welche Veranstaltungen kann die Fotobox gebucht werden?
+                    </summary>
+
+                    <p>
+                        Die Fotobox eignet sich unter anderem für
+                        Hochzeiten, Geburtstage, Firmenfeiern und private
+                        Veranstaltungen. Weitere Anlässe können individuell
+                        abgestimmt werden.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>
+                        In welchem Gebiet bietet DA Moments die Fotobox an?
+                    </summary>
+
+                    <p>
+                        Der Schwerpunkt liegt auf Hamburg und Umgebung.
+                        Andere Veranstaltungsorte können im Rahmen der
+                        Anfrage individuell besprochen werden.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>
+                        Kann das Fotolayout personalisiert werden?
+                    </summary>
+
+                    <p>
+                        Ja. Das Layout kann passend zum Anlass gestaltet
+                        werden, zum Beispiel mit Namen, Datum, Farben oder
+                        einem Veranstaltungslogo.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>
+                        Sind Requisiten verfügbar?
+                    </summary>
+
+                    <p>
+                        Abhängig vom gewählten Paket kann eine Auswahl
+                        an Requisiten für die Fotoaufnahmen enthalten sein.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>
+                        Wie kann ich eine unverbindliche Anfrage senden?
+                    </summary>
+
+                    <p>
+                        Sendet eine E-Mail an info@da-moments.de oder
+                        nutzt das Kontaktformular. Nennt möglichst Datum,
+                        Veranstaltungsort und Art des Events.
+                    </p>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAKT -->
+
+    <section class="section section-dark" id="kontakt">
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="eyebrow">Kontakt</span>
+
+                <h2>
+                    Lasst uns euren Moment planen
+                </h2>
+
+                <p class="lead">
+                    Teilt uns die wichtigsten Eckdaten mit. Wir melden
+                    uns anschließend persönlich bei euch.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+
+                <aside class="contact-info">
+
+                    <h3>DA Moments</h3>
+
+                    <p>
+                        Fotoboxen und Eventmomente für Hamburg
+                        und Umgebung.
+                    </p>
+
+                    <ul class="contact-list">
+
+                        <li>
+                            <strong>E-Mail:</strong><br>
+                            <a href="mailto:info@da-moments.de">
+                                info@da-moments.de
+                            </a>
+                        </li>
+
+                        <li>
+                            <strong>Telefon / WhatsApp:</strong><br>
+                            <span>BITTE TELEFONNUMMER EINTRAGEN</span>
+                        </li>
+
+                        <li>
+                            <strong>Standort:</strong><br>
+                            Hamburg und Umgebung
+                        </li>
+
+                        <li>
+                            <strong>Website:</strong><br>
+                            <a href="https://da-moments.de/">
+                                da-moments.de
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </aside>
+
+                <div class="contact-form">
+
+                    <form id="inquiryForm">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="name">
+                                    Name *
+                                </label>
+
+                                <input type="text"
+                                       id="name"
+                                       name="name"
+                                       autocomplete="name"
+                                       required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">
+                                    E-Mail *
+                                </label>
+
+                                <input type="email"
+                                       id="email"
+                                       name="email"
+                                       autocomplete="email"
+                                       required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="eventDate">
+                                    Veranstaltungsdatum
+                                </label>
+
+                                <input type="date"
+                                       id="eventDate"
+                                       name="eventDate">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="eventType">
+                                    Art der Veranstaltung
+                                </label>
+
+                                <select id="eventType"
+                                        name="eventType">
+                                    <option value="Nicht angegeben">
+                                        Bitte auswählen
+                                    </option>
+
+                                    <option value="Hochzeit">
+                                        Hochzeit
+                                    </option>
+
+                                    <option value="Geburtstag">
+                                        Geburtstag
+                                    </option>
+
+                                    <option value="Firmenfeier">
+                                        Firmenfeier
+                                    </option>
+
+                                    <option value="Privates Event">
+                                        Privates Event
+                                    </option>
+
+                                    <option value="Sonstiges">
+                                        Sonstiges
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="form-group full">
+                                <label for="location">
+                                    Veranstaltungsort
+                                </label>
+
+                                <input type="text"
+                                       id="location"
+                                       name="location"
+                                       placeholder="Zum Beispiel Hamburg">
+                            </div>
+
+                            <div class="form-group full">
+                                <label for="message">
+                                    Nachricht *
+                                </label>
+
+                                <textarea id="message"
+                                          name="message"
+                                          placeholder="Erzählt uns kurz von eurem Event."
+                                          required></textarea>
+                            </div>
+
+                        </div>
+
+                        <button class="button button-full"
+                                type="submit">
+                            Anfrage per E-Mail vorbereiten
+                        </button>
+
+                        <p class="form-note">
+                            Beim Absenden wird das E-Mail-Programm auf
+                            dem verwendeten Gerät geöffnet. Die Anfrage
+                            wird nicht automatisch versendet.
+                        </p>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPRESSUM -->
+
+    <section class="section" id="impressum">
+        <div class="container legal-content">
+
+            <div class="section-heading">
+                <span class="eyebrow">Rechtliches</span>
+                <h2>Impressum</h2>
+            </div>
+
+            <div class="legal-box">
+
+                <h3>Angaben gemäß § 5 DDG</h3>
+
+                <p>
+                    <strong>BITTE VOLLSTÄNDIGEN GEWERBLICHEN NAMEN EINTRAGEN</strong><br>
+                    handelnd unter DA Moments<br>
+                    <strong>BITTE VOLLSTÄNDIGE LADUNGSFÄHIGE ANSCHRIFT EINTRAGEN</strong><br>
+                    <strong>PLZ UND ORT EINTRAGEN</strong>
+                </p>
+
+                <h3>Kontakt</h3>
+
+                <p>
+                    Telefon:
+                    <strong>BITTE TELEFONNUMMER EINTRAGEN</strong><br>
+
+                    E-Mail:
+                    <a href="mailto:info@da-moments.de">
+                        info@da-moments.de
+                    </a>
+                </p>
+
+                <h3>Umsatzsteuer</h3>
+
+                <p>
+                    Umsatzsteuer-Identifikationsnummer, falls vorhanden:
+                    <strong>BITTE ANGABE ERGÄNZEN ODER ABSCHNITT ENTFERNEN</strong>
+                </p>
+
+                <h3>Verantwortlich für den Inhalt</h3>
+
+                <p>
+                    <strong>BITTE VOLLSTÄNDIGEN NAMEN UND ANSCHRIFT EINTRAGEN</strong>
+                </p>
+
+                <p>
+                    <strong>Wichtiger Hinweis:</strong>
+                    Die Platzhalter müssen vor der Veröffentlichung
+                    vollständig ersetzt werden. Die rechtlichen Texte
+                    sollten passend zum konkreten Gewerbe geprüft werden.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DATENSCHUTZ -->
+
+    <section class="section section-dark" id="datenschutz">
+        <div class="container legal-content">
+
+            <div class="section-heading">
+                <span class="eyebrow">Rechtliches</span>
+                <h2>Datenschutzerklärung</h2>
+            </div>
+
+            <div class="legal-box">
+
+                <h3>1. Verantwortliche Stelle</h3>
+
+                <p>
+                    Verantwortlich für die Datenverarbeitung auf dieser
+                    Website ist:
+                </p>
+
+                <p>
+                    <strong>BITTE VOLLSTÄNDIGEN GEWERBLICHEN NAMEN EINTRAGEN</strong><br>
+                    <strong>BITTE VOLLSTÄNDIGE ANSCHRIFT EINTRAGEN</strong><br>
+                    E-Mail:
+                    <a href="mailto:info@da-moments.de">
+                        info@da-moments.de
+                    </a>
+                </p>
+
+                <h3>2. Hosting über GitHub Pages</h3>
+
+                <p>
+                    Diese Website wird über GitHub Pages bereitgestellt.
+                    Beim Aufruf der Website können technisch erforderliche
+                    Verbindungsdaten durch den Hostinganbieter verarbeitet
+                    werden. Vor der Veröffentlichung sollte dieser Abschnitt
+                    anhand der tatsächlich eingesetzten Dienste rechtlich
+                    geprüft und vervollständigt werden.
+                </p>
+
+                <h3>3. Kontaktaufnahme</h3>
+
+                <p>
+                    Wenn eine Kontaktaufnahme per E-Mail erfolgt, werden
+                    die übermittelten Angaben zur Bearbeitung der Anfrage
+                    und möglicher Anschlussfragen verwendet.
+                </p>
+
+                <h3>4. Kontaktformular</h3>
+
+                <p>
+                    Das Kontaktformular auf dieser Website versendet keine
+                    Daten an einen separaten Server. Beim Absenden wird das
+                    lokale E-Mail-Programm geöffnet und eine E-Mail an
+                    info@da-moments.de vorbereitet.
+                </p>
+
+                <h3>5. Cookies</h3>
+
+                <p>
+                    Diese einfache Version der Website setzt selbst keine
+                    Analyse- oder Marketing-Cookies ein. Falls später
+                    externe Dienste, Karten, Tracking-Werkzeuge, Videos
+                    oder Social-Media-Inhalte eingebunden werden, muss
+                    dieser Abschnitt entsprechend angepasst werden.
+                </p>
+
+                <h3>6. Rechte betroffener Personen</h3>
+
+                <p>
+                    Betroffene Personen können im Rahmen der gesetzlichen
+                    Voraussetzungen insbesondere Auskunft, Berichtigung,
+                    Löschung oder Einschränkung der Verarbeitung ihrer
+                    personenbezogenen Daten verlangen.
+                </p>
+
+                <h3>7. Aktualität</h3>
+
+                <p>
+                    Diese Datenschutzerklärung muss angepasst werden,
+                    sobald sich Funktionen, Hosting, eingebundene Dienste
+                    oder die Verarbeitung personenbezogener Daten ändern.
+                </p>
+
+                <p>
+                    <strong>Wichtiger Hinweis:</strong>
+                    Dieser Mustertext ist keine individuelle Rechtsberatung.
+                    Die Angaben müssen auf die tatsächlich verwendeten
+                    Dienste und die konkrete Unternehmenssituation
+                    abgestimmt werden.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+                <div class="logo">
+                    DA <span>Moments</span>
+                </div>
+
+                <p>
+                    Fotoboxen und besondere Eventmomente für
+                    Hamburg und Umgebung.
+                </p>
+            </div>
+
+            <div>
+                <div class="footer-title">
+                    Navigation
+                </div>
+
+                <ul>
+                    <li>#leistungenLeistungen</a></li>
+                    <li>#paketePakete</a></li>
+                    <li>#ablaufAblauf</a></li>
+                    <li>#galerieGalerie</a></li>
+                    <li>#kontaktKontakt</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="footer-title">
+                    Rechtliches
+                </div>
+
+                <ul>
+                    <li>#impressumImpressum</a></li>
+                    <li>#datenschutzDatenschutz</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © <span id="currentYear"></span> DA Moments.
+            Alle Rechte vorbehalten.
+        </div>
+
+    </div>
+</footer>
+
+<!--
+    Telefonnummer ersetzen:
+    491234567890 durch die echte Mobilnummer im internationalen Format.
+    Beispiel für Deutschland:
+    0176 12345678 wird zu 4917612345678
+-->
+
+https://wa.me/491234567890?text=Hallo%20DA%20Moments%2C%20ich%20interessiere%20mich%20für%20eure%20Fotobox.
+    W
+</a>
+
+<script>
+    const menuButton = document.getElementById("menuButton");
+    const navigation = document.getElementById("navigation");
+    const navigationLinks = navigation.querySelectorAll("a");
+
+    menuButton.addEventListener("click", function () {
+        const isOpen = navigation.classList.toggle("open");
+
+        document.body.classList.toggle("menu-open", isOpen);
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.textContent = isOpen ? "✕" : "☰";
+    });
+
+    navigationLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+            navigation.classList.remove("open");
+            document.body.classList.remove("menu-open");
+            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.textContent = "☰";
+        });
+    });
+
+    document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+    document.getElementById("inquiryForm")
+        .addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const eventDate =
+                document.getElementById("eventDate").value || "Nicht angegeben";
+            const eventType =
+                document.getElementById("eventType").value;
+            const location =
+                document.getElementById("location").value.trim() ||
+                "Nicht angegeben";
+            const message =
+                document.getElementById("message").value.trim();
+
+            const subject =
+                "Fotobox-Anfrage von " + name;
+
+            const body =
+                "Hallo DA Moments,\n\n" +
+                "ich interessiere mich für eure Fotobox.\n\n" +
+                "Name: " + name + "\n" +
+                "E-Mail: " + email + "\n" +
+                "Veranstaltungsdatum: " + eventDate + "\n" +
+                "Art der Veranstaltung: " + eventType + "\n" +
+                "Veranstaltungsort: " + location + "\n\n" +
+                "Nachricht:\n" + message + "\n\n" +
+                "Viele Grüße\n" +
+                name;
+
+            window.location.href =
+                "mailto:info@da-moments.de" +
+                "?subject=" + encodeURIComponent(subject) +
+                "&body=" + encodeURIComponent(body);
+        });
+</script>
 
 </body>
 </html>
