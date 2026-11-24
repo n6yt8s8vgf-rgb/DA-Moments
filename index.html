@@ -109,4 +109,1151 @@
                 "@type": "Offer",
                 "price": "379",
                 "priceCurrency": "EUR",
-                "name": "
+                "name": "Fotobox – 400 Ausdrucke",
+                "availability": "https://schema.org/InStock"
+              }
+            ]
+          },
+          {
+            "@type": "Offer",
+            "price": "59",
+            "priceCurrency": "EUR",
+            "name": "Audio-Gästebuch pro Veranstaltung",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "price": "59",
+            "priceCurrency": "EUR",
+            "name": "Instax-Gästebuch pro Veranstaltung",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "price": "399",
+            "priceCurrency": "EUR",
+            "name": "All-Inclusive-Paket",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --cream: #f6f2eb;
+      --paper: #fffdf9;
+      --green: #46564a;
+      --deep: #2f3d34;
+      --eucalyptus: #778779;
+      --sage: #dce2d8;
+      --champagne: #b9a47e;
+      --lavender: #8d6a8f;
+      --lavender-light: #a186a8;
+      --ink: #29332c;
+      --muted: #667168;
+      --line: rgba(70, 86, 74, .18);
+      --shadow: 0 18px 46px rgba(47, 61, 52, .12);
+      --radius: 28px;
+      --max: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 104px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font: 16px/1.65 Arial, Helvetica, sans-serif;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      color: var(--deep);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.12;
+    }
+
+    h1 {
+      font-size: clamp(2.65rem, 6vw, 5rem);
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: clamp(2.15rem, 4vw, 3.4rem);
+      font-weight: 500;
+    }
+
+    h3 {
+      font-size: clamp(1.4rem, 2vw, 1.8rem);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    section {
+      padding: 82px 0;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 40px));
+      margin: auto;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 8px;
+      left: 8px;
+      z-index: 100;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: var(--deep);
+      color: #fff;
+      transform: translateY(-150%);
+    }
+
+    .skip-link:focus {
+      transform: none;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--champagne);
+      outline-offset: 4px;
+    }
+
+    .eyebrow {
+      color: var(--lavender);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .heading {
+      max-width: 760px;
+      margin-bottom: 36px;
+    }
+
+    .heading h2 {
+      margin: 10px 0 16px;
+    }
+
+    .heading p,
+    .section-copy {
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    /* NAVIGATION */
+
+    .top {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid var(--line);
+      background: rgba(246, 242, 235, .96);
+      backdrop-filter: blur(12px);
+    }
+
+    nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      flex: 0 0 auto;
+      color: var(--deep);
+      font: 700 1.45rem Georgia, serif;
+      letter-spacing: .07em;
+      text-decoration: none;
+    }
+
+    .brand span {
+      display: block;
+      color: var(--lavender);
+      font: 700 .68rem Arial, sans-serif;
+      letter-spacing: .24em;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .links a {
+      font-size: .88rem;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .links a:hover {
+      color: var(--lavender);
+    }
+
+    /* BUTTONS */
+
+    .btn {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 22px;
+      border: 1px solid var(--deep);
+      border-radius: 999px;
+      background: var(--deep);
+      color: #fff;
+      font-weight: 700;
+      line-height: 1.25;
+      text-align: center;
+      text-decoration: none;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover {
+      background: var(--green);
+      transform: translateY(-2px);
+    }
+
+    .btn.outline {
+      background: transparent;
+      color: var(--deep);
+    }
+
+    .btn.light {
+      border-color: #fff;
+      background: #fff;
+      color: var(--deep);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 76px 0 84px;
+      background:
+        radial-gradient(
+          circle at 86% 22%,
+          rgba(185, 164, 126, .28),
+          transparent 32%
+        ),
+        linear-gradient(
+          130deg,
+          var(--paper),
+          var(--cream)
+        );
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 54px;
+    }
+
+    .hero h1 {
+      margin: 14px 0 20px;
+    }
+
+    .hero h1 em {
+      display: block;
+      color: var(--lavender);
+      font-weight: 400;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .hero-note {
+      margin-top: 18px;
+      color: var(--green);
+      font-size: .94rem;
+      font-weight: 700;
+    }
+
+    .hero-image {
+      position: relative;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-image::after {
+      position: absolute;
+      right: -12px;
+      bottom: -14px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(220, 226, 216, .72);
+      content: "";
+      z-index: -1;
+    }
+
+    .hero-image img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      border-radius: 18px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* FOTOBOX */
+
+    .photobox {
+      background: var(--paper);
+    }
+
+    .photobox-layout {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .price-poster {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .price-poster img {
+      width: 100%;
+      height: auto;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 26px 0;
+    }
+
+    .benefit {
+      min-height: 146px;
+      padding: 20px 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--cream);
+    }
+
+    .benefit-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 12px;
+      border-radius: 50%;
+      background: var(--sage);
+      color: var(--deep);
+      font-weight: 800;
+    }
+
+    .benefit strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--deep);
+    }
+
+    .benefit span {
+      color: var(--muted);
+      font-size: .91rem;
+      line-height: 1.45;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 26px 0 18px;
+    }
+
+    .price-card {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+    }
+
+    .price-card strong {
+      display: block;
+      color: var(--lavender);
+      font: 700 1.65rem Georgia, serif;
+    }
+
+    .price-card span {
+      color: var(--muted);
+    }
+
+    .included {
+      margin: 18px 0 0;
+      padding: 18px 20px 18px 40px;
+      border-radius: 18px;
+      background: var(--sage);
+      color: var(--deep);
+    }
+
+    .included li + li {
+      margin-top: 5px;
+    }
+
+    /* GÄSTEBÜCHER */
+
+    .memory-section {
+      background: var(--cream);
+    }
+
+    .memory-section.alt {
+      background: var(--paper);
+    }
+
+    .memory-grid {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 46px;
+      align-items: center;
+    }
+
+    .memory-section.alt .memory-visual {
+      order: 2;
+    }
+
+    .memory-visual {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .memory-visual img {
+      width: 100%;
+      height: auto;
+    }
+
+    .memory-copy h2 {
+      margin: 10px 0 18px;
+    }
+
+    .memory-copy p {
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .service-price {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 8px;
+      margin: 22px 0 6px;
+      color: var(--lavender);
+      font: 700 2.35rem Georgia, serif;
+    }
+
+    .service-price small {
+      color: var(--muted);
+      font: 700 .88rem Arial, sans-serif;
+    }
+
+    .notice {
+      margin: 15px 0 24px;
+      padding: 12px 15px;
+      border-left: 4px solid var(--champagne);
+      border-radius: 0 12px 12px 0;
+      background: rgba(185, 164, 126, .13);
+      color: var(--deep);
+      font-size: .92rem;
+    }
+
+    /* ALL INCLUSIVE */
+
+    .allin {
+      background: var(--deep);
+      color: #fff;
+    }
+
+    .allin .eyebrow {
+      color: var(--sage);
+    }
+
+    .allin h2,
+    .allin h3 {
+      color: #fff;
+    }
+
+    .allin .heading p {
+      color: rgba(255, 255, 255, .78);
+    }
+
+    .allin-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .allin-visual {
+      margin: 0;
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, .2);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .08);
+    }
+
+    .allin-visual img {
+      width: 100%;
+      border-radius: 18px;
+    }
+
+    .allin-visual figcaption {
+      padding: 12px 6px 2px;
+      color: rgba(255, 255, 255, .72);
+      font-size: .88rem;
+      text-align: center;
+    }
+
+    .allin-list {
+      display: grid;
+      gap: 10px;
+      margin: 0 0 28px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .allin-list li {
+      position: relative;
+      padding-left: 28px;
+      color: rgba(255, 255, 255, .9);
+    }
+
+    .allin-list li::before {
+      position: absolute;
+      left: 0;
+      color: var(--champagne);
+      content: "✓";
+      font-weight: 800;
+    }
+
+    /* TRAUERTELEFON */
+
+    .mourning {
+      background:
+        radial-gradient(
+          circle at 50% 0,
+          rgba(141, 106, 143, .13),
+          transparent 42%
+        ),
+        var(--cream);
+    }
+
+    .mourning-box {
+      max-width: 980px;
+      margin: auto;
+      padding: 54px;
+      border: 1px solid rgba(141, 106, 143, .25);
+      border-radius: 34px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .mourning-heart {
+      margin-bottom: 8px;
+      color: var(--lavender);
+      font-size: 2.4rem;
+    }
+
+    .mourning-box h2 {
+      max-width: 790px;
+      margin: 10px auto 22px;
+    }
+
+    .mourning-intro {
+      max-width: 760px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .mourning-benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 30px 0;
+      text-align: left;
+    }
+
+    .mourning-benefit {
+      padding: 20px;
+      border-radius: 18px;
+      background: rgba(141, 106, 143, .08);
+    }
+
+    .mourning-benefit strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--deep);
+    }
+
+    .mourning-benefit span {
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .mourning-highlight {
+      margin-bottom: 26px;
+      padding: 18px;
+      border-radius: 18px;
+      background: var(--sage);
+      color: var(--deep);
+      font-family: Georgia, serif;
+      font-size: 1.1rem;
+    }
+
+    .mourning-contact {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    /* KONTAKT */
+
+    .contact {
+      background: var(--paper);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 40px;
+      align-items: stretch;
+    }
+
+    .contact-copy h2 {
+      margin: 10px 0 18px;
+    }
+
+    .contact-copy > p {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 9px;
+      margin: 24px 0;
+    }
+
+    .contact-details a {
+      width: fit-content;
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    .contact-card {
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--cream);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card h3 {
+      margin: 9px 0 18px;
+    }
+
+    .contact-card p {
+      margin-bottom: 24px;
+      color: var(--muted);
+    }
+
+    /* LEGAL */
+
+    .legal {
+      padding: 58px 0;
+      border-top: 1px solid var(--line);
+      background: var(--cream);
+    }
+
+    .legal + .legal {
+      background: #efeae1;
+    }
+
+    .legal .wrap {
+      max-width: 900px;
+    }
+
+    .legal h2 {
+      margin-bottom: 26px;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+    }
+
+    .legal h3 {
+      margin: 24px 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .legal p {
+      color: var(--muted);
+    }
+
+    address {
+      color: var(--muted);
+      font-style: normal;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 28px 0 90px;
+      background: var(--deep);
+      color: rgba(255, 255, 255, .78);
+      text-align: center;
+    }
+
+    footer a {
+      color: #fff;
+      text-underline-offset: 3px;
+    }
+
+    .floating-wa {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 40;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      background: #4f795c;
+      color: #fff;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .22);
+      font-size: .84rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 980px) {
+      nav {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        padding: 12px 0;
+      }
+
+      .links {
+        grid-column: 1 / -1;
+        width: 100%;
+        padding: 3px 0 6px;
+        overflow-x: auto;
+        scrollbar-width: thin;
+      }
+
+      .hero-grid,
+      .photobox-layout,
+      .memory-grid,
+      .allin-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        max-width: 650px;
+      }
+
+      .photobox-layout {
+        gap: 34px;
+      }
+
+      .price-poster {
+        max-width: 680px;
+      }
+
+      .memory-visual {
+        max-width: 680px;
+      }
+
+      .memory-section.alt .memory-visual {
+        order: 0;
+      }
+
+      .allin-visual {
+        max-width: 620px;
+      }
+    }
+
+    /* SMARTPHONE */
+
+    @media (max-width: 660px) {
+      html {
+        scroll-padding-top: 130px;
+      }
+
+      .wrap {
+        width: calc(100% - 28px);
+      }
+
+      section {
+        padding: 62px 0;
+      }
+
+      nav > .btn {
+        min-height: 42px;
+        padding: 8px 14px;
+        font-size: .86rem;
+      }
+
+      .links {
+        gap: 16px;
+      }
+
+      .hero {
+        padding: 56px 0 64px;
+      }
+
+      .hero-grid {
+        gap: 32px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 13vw, 3.6rem);
+      }
+
+      .hero-image {
+        padding: 10px;
+        border-radius: 22px;
+      }
+
+      .hero-image img {
+        aspect-ratio: 4 / 5;
+        border-radius: 14px;
+      }
+
+      .actions .btn {
+        width: 100%;
+      }
+
+      .benefits,
+      .mourning-benefits {
+        grid-template-columns: 1fr;
+      }
+
+      .benefit {
+        min-height: auto;
+      }
+
+      .price-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .memory-grid {
+        gap: 28px;
+      }
+
+      .mourning-box {
+        padding: 34px 20px;
+        border-radius: 24px;
+      }
+
+      .contact-card {
+        padding: 26px 22px;
+      }
+
+      .floating-wa {
+        right: 14px;
+        bottom: 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="top">
+    <nav class="wrap" aria-label="Hauptnavigation">
+
+      <a
+        class="brand"
+        href="#start"
+        aria-label="DA Moments – Startseite"
+      >
+        DA
+        <span>MOMENTS</span>
+      </a>
+
+      <ul class="links">
+        <li><a href="#angebote">Fotobox</a></li>
+        <li><a href="#gaestebuecher">Audio-Gästebuch</a></li>
+        <li><a href="#instax-gaestebuch">Instax-Gästebuch</a></li>
+        <li><a href="#allin">All Inclusive</a></li>
+        <li><a href="#trauertelefon">Trauertelefon</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+
+      <a
+        class="btn"
+        href="https://wa.me/4915630164661?text=Hallo%20DA%20Moments%2C%20ich%20habe%20eine%20Anfrage"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Jetzt anfragen
+      </a>
+
+    </nav>
+  </header>
+
+  <main id="inhalt">
+
+    <!-- HERO -->
+
+    <section class="hero" id="start">
+      <div class="wrap hero-grid">
+
+        <div>
+
+          <div class="eyebrow">
+            DA Moments · Hamburg
+          </div>
+
+          <h1>
+            Fotobox mieten in Hamburg
+            <em>Besondere Momente. Für immer.</em>
+          </h1>
+
+          <p class="hero-copy">
+            Ob Hochzeit, Geburtstag, Jubiläum, Firmenfeier oder Party:
+            Mit unserer Fotobox und den persönlichen Gästebüchern entstehen
+            Erinnerungen, die weit über den Veranstaltungstag hinaus bleiben.
+          </p>
+
+          <p class="hero-note">
+            Spiegelreflexkamera · hochwertiger Drucker · einfache Bedienung
+          </p>
+
+          <div class="actions">
+
+            <a
+              class="btn"
+              href="#angebote"
+            >
+              Fotobox & Preise ansehen
+            </a>
+
+            <a
+              class="btn outline"
+              href="#kontakt"
+            >
+              Termin anfragen
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="hero-image">
+
+          <img
+            src="Fotobox.jpeg"
+            alt="Weiße DA Moments Fotobox mit Spiegelreflexkamera für Veranstaltungen in Hamburg"
+            width="359"
+            height="1024"
+            fetchpriority="high"
+          >
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- FOTOBOX -->
+
+    <section class="photobox" id="angebote">
+
+      <div class="wrap">
+
+        <div class="heading">
+
+          <div class="eyebrow">
+            Unsere Fotobox
+          </div>
+
+          <h2>
+            Fotobox für Hamburg & Umgebung
+          </h2>
+
+          <p>
+            Professionelle Bilder, sofortige Ausdrucke und eine Bedienung,
+            die eure Gäste ohne Vorkenntnisse verstehen.
+            Wählt das Paket, das am besten zu eurer Feier passt.
+          </p>
+
+        </div>
+
+
+        <div class="photobox-layout">
+
+          <div class="price-poster">
+
+            <img
+              src="fotobox-preise.jpeg.jpeg"
+              alt="DA Moments Fotobox-Pakete: digitale Bilder ab 199 Euro und Pakete mit 150, 250 oder 400 Ausdrucken"
+              width="699"
+              height="1024"
+              loading="lazy"
+              decoding="async"
+            >
+
+          </div>
+
+
+          <div>
+
+            <div
+              class="benefits"
+              aria-label="Vorteile der Fotobox"
+            >
+
+              <div class="benefit">
+
+                <div
+                  class="benefit-icon"
+                  aria-hidden="true"
+                >
+                  01
+                </div>
+
+                <strong>
+                  Spiegelreflexkamera
+                </strong>
+
+                <span>
+                  Hochwertige Fotos in bester Qualität.
+                </span>
+
+              </div>
+
+
+              <div class="benefit">
+
+                <div
+                  class="benefit-icon"
+                  aria-hidden="true"
+                >
+                  02
+                </div>
+
+                <strong>
+                  Professioneller Drucker
+                </strong>
+
+                <span>
+                  Schnelle, hochwertige Ausdrucke direkt vor Ort.
+                </span>
+
+              </div>
+
+
+              <div class="benefit">
+
+                <div
+                  class="benefit-icon"
+                  aria-hidden="true"
+                >
+                  03
+                </div>
+
+                <strong>
+                  Einfache Bedienung
+                </strong>
+
+                <span>
+                  Intuitiv und für alle Gäste leicht verständlich.
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div
+              class="price-grid"
+              aria-label="Fotobox-Preise"
+            >
+
+              <div class="price-card">
+                <strong>199 €</strong>
+                <span>Nur digitale Bilder</span>
+           
